@@ -277,19 +277,177 @@
 #     file.write("Thank you!")
 
 #--------------------------------------------------------
+# Output Formatting
 
-name = "Jamal"
-age = 23
-city = "Chennai"
+#1. formatting using .format
 
-print(name," - ",age," - ",city)
+# name = "Jamal"
+# age = 23
+# city = "Chennai"
 
-amount = 120.95
+# print(name," - ",age," - ",city)
 
-print("Amount is ${:.2f}".format(amount))
+# amount = 120.95
+
+# print("Amount is ${:.2f}".format(amount))
+
+#2. using sep and end;
+
+# print("a","2","d",sep="-")
+# print("a","2","d",sep="@")
+# print("a","2","d",sep="#")
+
+
+# print("jamal",end="@")
+# print("gmail.com")
+
+#3. using f-string
+
+# name = "Jamal"
+# age =23
+
+# print(f"{name} is {age} years old")
+
+#4. using # operator
+
+# %d –integer
+# %f – float
+# %s – string
+# %x –hexadecimal
+# %o – octal
+
+# num = 23
+
+# print("%d is odd number" %num)
+
 
 
 #------------------------------------------------
+#Taking multiple inputs in python
+
+# x,y = input("Enter two values :").split()
+# print(x," ",y)
+
+#Conditional Inputs in Python
+
+# age = int(input("Enter your age"))
+
+# if (age < 0):
+#     print("Enter the Valid age")
+
+# elif (age < 18):
+#     print("Youre a minor")
+
+# elif (age > 18):
+#     print("Youre an adult")
+
+#-------------------------------------------------------
+#Date : 28-02-25
+
+# print(5/3)
+# print(5//3)
+# print(5**2)
+
+# num = input("Enter the number")
+# print(type(num))
+
+# print("Geeks for Geeks",end="*")
+# print("Hello")
+
+# print("%.2f is float, %d is int" %(1,34))
+
+#Formatting Output using The Format Method
+
+# print("{0} is a number. {1} is float.".format(1,23.23))
+# print("{0} is a person".format("Jamal"))
 
 
+#-- # Mixing positional and named arguments
+# string = "{0:10} is a person , {1} years old"
+# print(string.format("Jamal",23))
+
+# -- Format integers and floats with specified width and precision
+
+# string1  = "{0:.4f} is a float".format(10)
+# string2  = "{0:10.2f} is a precisioned value".format(10) 
+# 0: (before : is denotes the position of element is given format)
+# :10 (after : is denotes space width btwn float and word)
+# .2f (.2 denotes precision. For ex: 13.45)
+# f -> denotes float
+# print(string1)
+# print(string2)
+
+
+# string3 = "{1:.2f} fahrenheit is a body's temperature. {0:d} is avg lifespan of indian ".format(72,98.7)
+# print(string3)
+
+# string4 = "{a} is a Dog which  is {b} years old".format(a="Sam",b=3)
+# print(string4)
+
+# string = "Hello Jamal"
+
+# print("Left aligned")
+# print(string.ljust(40,"#"))
+
+# print("\nCenter aligned ")
+# print(string.center(40,"!"))
+
+# print("\nRight aligned ")
+# print(string.rjust(40,"*"))
+
+# mylist = list(input())
+
+# print(mylist)
+
+#-----------------------------------------------
+
+#Set an Input Time Limit using the inputimeout module
+
+# from inputimeout import inputimeout
+
+# try :
+#     name = inputimeout("Enter the name", timeout=10)
+
+# except exception : 
+#     timeover = "Entry time is over"
+#     print(exception,timeover)
+
+# print(name)
+
+# print("hello")
+
+#---------------------------------------------------------------------------------------------------------
+#Set an Input Time Limit using the inputimeout module
+
+# from threading import Timer
+
+# inputtime = int(input("Enter the time in seconds"))
+
+# t = Timer(inputtime, lambda : print("\nYour entry time is over"))
+
+# t.start()
+
+# print("Enter your pet animal")
+# pet = input("Enter the pet name")
+# print(pet)
+
+# t.cancel()
+
+
+#------------------------------------------
+
+# try :
+#     num = int(input("Enter the number"))
+#     print(num)
+# except ValueError:
+#     print("Invalid Input, ENter the number")
+
+#---------------------------------------------------
+
+# name = input("Enter the name")
+# print(name)
+# print(type(name))
+
+# x,y,z = input("Enter multiple inputs").split()
+# print(x,y,z)
 
