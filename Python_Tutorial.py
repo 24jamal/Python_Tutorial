@@ -451,3 +451,199 @@
 # x,y,z = input("Enter multiple inputs").split()
 # print(x,y,z)
 
+#--------------------------------------------
+#Python String
+
+# name = "jamal"
+
+# print(name[1])
+
+# name = name + name[0]
+# print(name)
+
+# string  = """ococ
+# ricinrcr
+# rocroc"""
+
+# string = "Jamal"
+
+# # print(string)
+
+# print(string[1:2])
+
+# print(string[::-1])
+
+# string = "Helpo World"
+
+# string = "J" + string[1:]
+# print(string)
+
+# s2 = string.replace("Jello","My")
+# print(s2)
+
+# print(string[::3])
+
+#-------------------------------------------------------
+
+#Python - Modify Strings
+
+# s = "hello world"
+# print(s.title())
+# print(s.lower())
+# print(s.upper())
+# print(s.swapcase())
+
+# #Replacing Substrings
+
+# string = "Hello world"
+# string = string.replace("Hello","My")
+# print(string)
+
+# #Trimming Whitespace
+
+# stringx = "    Hello Jamal    "
+# print(len(stringx))
+# string2 = stringx.strip()
+
+# print(len(string2))
+
+#Concatenating Strings
+
+# name = "Jamal"
+# print("Hello "+name+ "How are you?")
+
+# #Checking for Substrings
+# string = "Hello world"
+
+# if "world" in string:
+#     print("its there")
+# else:
+#     print("Not there")
+
+#----------------------------------
+#Python string length
+
+# s1 = "absc"
+
+# print(len(s1))
+
+# myset = {1,2,3,4,5}
+# print(len(myset))
+
+# mytuple = (29,3,4,5)
+# print(len(mytuple))
+
+# mydict = {1:"apple",2:"banana",3:"Citron"}
+# print(len(mydict))
+
+string = "Hello"
+print(string[:])
+print(string[::])
+print(string[:-1])
+
+print(string[-3:-1])
+print(string[-5: -1: 2])
+
+#Reverse a string
+print(string[::-1])
+
+#using Reversed and join
+
+string = "My world"
+rev = "".join(reversed(string))
+print(rev)
+
+
+string = "Pennsylvania"
+rev = ""
+
+for ch in string:
+    rev = ch + rev
+
+print(rev)
+
+#----------------------------------------
+#Reverse a string using List 
+
+string = "Minnesotta"
+stack = list(string)
+rev = ""
+
+while (stack):
+
+    rev += stack.pop()
+
+
+print(rev)
+
+
+#String Comparison in Python
+
+s1 = "Hello1"
+s2 = "Hello"
+
+if (s1 > s2):
+    print("Same")
+else :
+    print("Not same")
+
+
+
+s1 = "Hello1"
+s2 = "Hello"
+
+if (s1 != s2):
+    print("NotSame")
+else :
+    print("Same")
+
+
+print(s1.startswith("He"))
+print(s1.endswith("lo1"))
+
+
+class Employee:
+
+    def __init__(self,Name,Age):
+        self.Name = Name
+        self.Age = Age
+
+    def display_details(self):
+        print("Employee Name : "+ self.Name + " | Employee Age : "+ str(self.Age))
+
+
+emp1 = Employee("Jamal",23)
+
+emp1.display_details()
+
+#---------------------------------------
+
+# - *args - we can pass multiple parameters into function return value
+#function takes all paras as single tuple 
+
+# def addition(*args):
+
+#     # sum = 0
+#     # for i in (args):
+#     #     sum += i
+#     sum1 =0
+#     sum1 = sum(args)
+    
+#     print(sum1)
+
+#     # print(sum(*args))
+
+# print(addition(1,2,3,4))
+
+
+# - kwargs -> we can pass multiple key value pairs into function and then function returns the key vakues in return
+
+def printKeyValue(**kwargs):
+
+    for k, val in kwargs.items():
+        print(k,val)
+
+
+query = {"a":"apple","b":"banana","c": "cherry"}
+
+printKeyValue(**query)
